@@ -2,7 +2,7 @@
 using namespace std;
 
 /*Faça um programa que solicita ao usuário três números reais e exibe na tela apenas o menor deles. */
-
+EDITAR
 int menor(int a, int b, int c){
     if (cin.fail()){
         cout<<"Opção inválida. Tente novamente!";
