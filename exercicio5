@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+/*) Faça um programa que solicita a data de nascimento de uma pessoa e a data atual e exiba a idade 
+desta pessoa em anos (A data deve ser armazenada em 3 variáveis inteiras para ano, mês e dia. No 
+cálculo devem ser considerados o mês e dia de nascimento. Por exemplo, estamos em 03 de agosto. 
+Quem nasceu em 04 de agosto de 2004 possui ainda 9 anos, e não 10 anos).  */
+
+int main(){
+    
+    int dia, mes, ano, diaatual, mesatual, anoatual, idade;
+    cout<<"Digite o dia do seu nascimento: ";
+    cin>>dia;
+    cout<<"Digite o mês do seu nascimento 1 a 12: ";
+    cin>>mes;
+    cout<<"Digite o ano do seu nascimento: ";
+    cin>>ano;
+    cout<<"\n\nDigite o dia em que estamos: ";
+    cin>>diaatual;
+    cout<<"Digite o mês que estamos 1 a 12: ";
+    cin>>mesatual;
+    cout<<"Digite o ano em que estamos: ";
+    cin>> anoatual;
+    
+    idade = anoatual - ano;
+    
+    if (mesatual < mes || (mesatual == mes && diaatual<dia)){
+        cout<<"Você possui: "<<idade - 1<<" anos";
+    }
+    else{
+        cout<<"Você possui: "<<idade<< " anos";
+    }
+    
+    return 0;
+}
