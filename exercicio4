@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+/*) Faça um programa que solicita ao usuário três números inteiros e exibe na tela qual é o maior valor, 
+o menor valor e o valor intermediário. */
+
+int main(){
+    
+    int a, b, c;
+    cout<<"Digite três números inteiros: ";
+    cin>>a>>b>>c;
+    int maior, menor, meio;
+    if (cin.fail()){
+        cout<<"Opção inválida. Tente novamente!"; 
+        cin.clear();
+        return 1;
+    }
+    
+    if (a >= b && a >= c){
+        maior = a;
+    }
+    else if (b >= a && b >= c){
+        maior = b;
+    }
+    else {
+        maior = c;
+    }
+    
+    if (a <= b && a <= c){
+        menor = a;
+    }
+    else if (b <= a && b <= c){
+        menor = b;
+    }
+    else if (c <= a && c <= b){
+        menor = c;
+    }
+    
+    meio = a + b + c - maior - menor;
+    
+    cout<<"Maior: "<<maior<<endl;
+    cout<<"Intermediário: "<<meio<<endl;
+    cout<<"Menor: "<<menor<<endl;
+    
+    return 0;
+    
+}
