@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+/*Faça um programa que exiba o maior dentre dois números reais digitados pelo usuário. Caso eles 
+sejam iguais exiba uma mensagem correspondente. Saídas: 
+Pedido ao usuário = "Digite dois números inteiros:";
+• Caso eles sejam iguais = “Eles são iguais”. 
+• Caso sejam diferentes exiba somente o número desejado. */
+
+int maior(int a, int b){
+    if (cin.fail()){
+        cout<<"Opção inválida. Tente novamente!";
+        return 0;
+    }
+    if (a > b){
+        cout<<"A é maior que B";
+        return a;
+    }
+    else if (b > a){
+        cout<<"B é maior que A";
+        return b;
+    }
+    else if (a == b){
+        cout<<"Eles são iguais";
+        return a;
+    }
+}
+    
+    
+
+int main(){ 
+    
+    int a, b;
+    cout<<"Digite dois número inteiro: ";
+    cin>> a >> b;
+    maior(a,b);
+    
+
+    return 0;
+}
