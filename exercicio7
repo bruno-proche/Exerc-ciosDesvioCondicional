@@ -1,0 +1,46 @@
+/******************************************************************************
+
+Escreva um algoritmo para calcular as raízes de uma equação do 2o grau (Ax2 + Bx + C), sendo que 
+os valores A, B e C são fornecidos pelo usuário. Lembre-se: não pode ser negativo.
+
+*******************************************************************************/
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int delta (int a, int b, int c){
+   return pow(b,2) - 4 * a * c; 
+}
+
+int main()
+{
+    int a, b, c;
+    double formulax1, formulax2;
+    
+    cout<<"Digite o valor de A: ";
+    cin>>a;
+    cout<<"Digite o valor de B: ";
+    cin>>b;
+    cout<<"Digite o valor de C: ";
+    cin>>c;
+    
+    int calculodelta = delta(a,b,c);
+    if (a == 0 ){
+        cout<<"Não é uma equação de segundo grau!";
+        return 0;
+    }
+    if (calculodelta < 0 ){
+        cout<<"Delta inválido. Tente novamente!";  
+    }
+    else{
+        
+        formulax1 = ((-b + sqrt(calculodelta))/2 * a);
+        formulax2 = ((-b - sqrt(calculodelta))/2 * a);
+        cout<<"\nResultado x1: "<<formulax1<<endl;
+        cout<<"Resultado x2: "<<formulax2<<endl;
+    }
+    
+
+    
+    return 0;
+}
