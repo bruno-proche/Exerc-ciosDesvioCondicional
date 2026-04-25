@@ -1,0 +1,31 @@
+/****************************************************************************
+Um hotel cobra R$ 50,00 a diária, e mais uma taxa de serviço. A taxa de serviço é calculada da seguinte 
+forma: 
+• R$ 4,00 por diária, se o número de diárias for maior que 10. 
+• R$ 5,00 por diária, se o número de diárias for igual a 10. 
+• R$ 8,50 por diária, se o número de diárias for menor que 10. 
+
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    float diaria = 50.00, numdia, resultado = 0;
+    cout<<"Digite o número de diárias: ";
+    cin>> numdia;
+    
+    if (numdia > 10){
+        resultado = (diaria * numdia) + (4.00 * numdia);
+    }
+    else if (numdia == 10){
+        resultado = (diaria * numdia) + (5.00 * numdia);
+    }
+    else{
+        resultado = (diaria * numdia) + (8.50 * numdia);
+    }
+    
+    cout<<"A sua conta será de: R$ " << resultado;
+    return 0;
+}
